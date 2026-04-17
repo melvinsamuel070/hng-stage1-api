@@ -1,23 +1,35 @@
-const express = require("express");
+const express = require('express');
 const app = express();
 
-app.get("/", (req, res) => {
+// ROOT
+app.get('/', (req, res) => {
     res.status(200).json({
         message: "API is running"
     });
 });
 
-app.get("/health", (req, res) => {
+// HEALTH
+app.get('/health', (req, res) => {
     res.status(200).json({
         status: "healthy"
     });
 });
 
-app.get("/me", (req, res) => {
+// ME
+app.get('/me', (req, res) => {
     res.status(200).json({
         name: "Ugwu Samuel Ebube",
         email: "melvinsamuel070@gmail.com",
         github: "https://github.com/melvinsamuel070"
+    });
+});
+
+// API
+app.get('/api', (req, res) => {
+    res.status(200).json({
+        message: "HNGI14 Stage 0",
+        track: "DevOps",
+        username: "UgwuSamuelEbube"
     });
 });
 
