@@ -8,7 +8,7 @@ app.get('/', (req, res) => {
     });
 });
 
-// HEALTH
+// HEALTH - FIXED
 app.get('/health', (req, res) => {
     res.status(200).json({
         status: "healthy"
